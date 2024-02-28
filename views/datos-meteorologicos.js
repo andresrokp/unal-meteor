@@ -43,4 +43,17 @@ function estaciones_entityList(params) {
             return remainingTime;
         }
     }
+
+    function estadoDK_cellContent(params) {
+        let render;
+
+        let sinceTime = Date.now() - value;
+
+        if (sinceTime < 60 * 60 * 1000) {
+            render = "🟢";
+        } else {
+            render = "🔴";
+        }
+        return render;
+    }
 }
